@@ -5,12 +5,15 @@ let outputType = document.getElementById("output-file-type");
 let outputCategory = document.getElementById("output-file-category");
 let filename;
 let filetype = [];
+let low;
 
 // -------------- BUTTON FUNCTION ----------------
 buttonGetName.addEventListener("click", (e) => {
   e.preventDefault();
-  filename = userInput.value.split(".");
+  low = userInput.value.toLowerCase();
+  filename = low.split(".");
   filetype = filename.splice(1, 1);
+  
 
   let category;
 
